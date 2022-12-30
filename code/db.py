@@ -280,7 +280,7 @@ def add_course_schedule(course_id, weekday, start_time, duration, end_time):
     query = f"""
           SELECT *
           FROM courses_schedule
-          WHERE day='{weekday}' OR (
+          WHERE day='{weekday}' AND (
             (start_time BETWEEN '{start_str}' AND '{end_str}') 
             OR (DATE_ADD(start_time, INTERVAL {duration} HOUR) BETWEEN '{start_str}' AND '{end_str}') )"""
     courses = list(
