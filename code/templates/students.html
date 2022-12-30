@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Students List</title>
+      <style>
+         @import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
+         *, *:after, *:before {
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         }
+         html, body {
+         position: relative;
+         min-height: 100%;
+         height: 100%;
+         
+         }
+         html {
+         position: relative;
+         overflow-x: hidden;
+         margin: 16px;
+         padding: 0;
+         min-height: 100%;
+         font-size: 62.5%;
+         }
+         body {
+         font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+         font-style: normal;
+         font-weight: 300;
+         font-size: 1.4rem;
+         line-height: 2rem;
+         letter-spacing: 0.01rem;
+         background-color: #eee;
+         color: #000;
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         text-rendering: optimizeLegibility;
+         }
+         .table {
+         width: 100%;
+         max-width: 100%;
+         }
+         .table > thead > tr > th,
+         .table > thead > tr > td,
+         .table > tbody > tr > th,
+         .table > tbody > tr > td {
+         text-align: left;
+         padding: 1.6rem;
+         vertical-align: top;
+         border-top: 0;
+         }
+         .table > thead > tr > th {
+         font-weight: 600;
+         vertical-align: bottom;
+         border-bottom: 1px solid rgba(0,0,0,0.12);
+         background-color: #c5cae9;
+         }
+         .table > thead:first-child > tr:first-child > th,
+         .table > thead:first-child > tr:first-child > td {
+         border-top: 0;
+         }
+         .table > tbody + tbody {
+         border-top: 1px solid rgba(0,0,0,0.12);
+         }
+         .table .table {
+         background-color: #fff;
+         }
+         .table-hover.table-mc-indigo > tbody > tr:hover > td, .table-hover.table-mc-indigo > tbody > tr:hover > th {
+         background-color: #c5cae9;
+         cursor: pointer;
+         }
+         .tb-container{
+         width: 75%;
+         max-width: 100%;
+         background-color: #fff;
+         margin: 2rem auto;
+         border-radius: 15px;
+         overflow: hidden;
+         }
+         h1 {
+         font-size: 3rem;
+         font-weight: 700;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+         /* margin-bottom: 1rem; */
+         color: rgba(9, 146, 105, 0.8);
+         text-align: center;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="tb-container">
+        <h1>Students List</h1>
+         <table id="table" class="table table-hover table-mc-indigo">
+            <thead>
+               <tr>
+                  <th>#</th>
+                  <th>Student Name</th>
+                  <th>Level</th>
+                  <th>Date of Birth</th>
+                  <th>Mobile No</th>
+                  <th>Email</th>
+                  <th>Address</th>
+               </tr>
+            </thead>
+            <tbody>
+              {% for std in students %}
+              <tr>
+                <td data-title="ID">{{ loop.index }}</td>
+                <td>{{ std.student_name }}</td>
+                <td>{{ std.level_name }}</td>
+                <td>{{ std.dob }}</td>
+                <td>{{ std.mobile_number }}</td>
+                <td>{{ std.email }}</td>
+                <td>{{ std.address }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>

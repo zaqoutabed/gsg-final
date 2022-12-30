@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Home</title>
+      <style>
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         html {
+         font-size: 62.5%;
+         font-family: "Lato", sans-serif;
+         }
+         body {
+         background-color: #eee;
+         color: #000;
+         padding-top: 100px;
+         }
+         h1 {
+         font-size: 3rem;
+         font-weight: 700;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+         margin-bottom: 1rem;
+         color: rgba(9, 146, 105, 0.8);
+         }
+         .articles {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         }
+         .features {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         max-width: 90rem;
+         column-gap: 2rem;
+         row-gap: 2rem;
+         }
+         .item {
+         display: flex;
+         flex-direction: column;
+         background-image: linear-gradient(to right bottom, #dee2e6, #dbdbdb);
+         overflow: hidden;
+         border-radius: 10px;
+         position: relative;
+         }
+         .item-header {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         margin: 2rem 2rem;
+         gap: 1rem;
+         }
+         .item-icon {
+         width: 2.4rem;
+         height: 2.4rem;
+         }
+         .item-title {
+         font-size: 2.4rem;
+         font-weight: 400;
+         }
+         .item-link:link,
+         .item-link:visited {
+         text-decoration: none;
+         color: #099268;
+         /* stick link to the bottom of item */
+         margin-top: auto;
+         }
+         .item-link:hover,
+         .item-link:active {
+         color: #3aa886;
+         text-decoration: underline #3aa886;
+         }
+      </style>
+   </head>
+   <body>
+      <section class="articles">
+         <h1>Web Pages</h1>
+         <div class="features">
+            <div class="item item1">
+               <div class="item-header">
+                  <ion-icon class="item-icon" name="people-outline"></ion-icon>
+                  <h3 class="item-title"><a class="item-link" href="/students" target="blank">Students List &rarr;</a></h3>
+               </div>
+            </div>
+            <div class="item item1">
+               <div class="item-header">
+                  <ion-icon class="item-icon" name="easel-outline"></ion-icon>
+                  <h3 class="item-title"><a class="item-link" href="/courses" target="blank">Courses List &rarr;</a></h3>
+               </div>
+            </div>
+            <div class="item item1">
+               <div class="item-header">
+                  <ion-icon class="item-icon" name="calendar-outline"></ion-icon>
+                  <h3 class="item-title"><a class="item-link" href="/schedules" target="blank">Schedules List &rarr;</a></h3>
+               </div>
+            </div>
+         </div>
+      </section>
+      <hr style="width: 50%; margin:45px auto">
+      <section class="articles">
+         <h1>API V1</h1>
+         <div class="features" style="grid-template-columns: 1fr 1fr;">
+            <div class="item item1">
+               <div class="item-header">
+                  <ion-icon class="item-icon" name="code-slash-outline"></ion-icon>
+                  <h3 class="item-title"><a class="item-link" href="/api/v1/students" target="blank">Students List &rarr;</a></h3>
+               </div>
+            </div>
+            <div class="item item1">
+               <div class="item-header">
+                  <ion-icon class="item-icon" name="man-outline"></ion-icon>
+                  <h3 class="item-title"><a class="item-link" href="/api/v1/students/1" target="blank">Student Details (show for id=1)  &rarr;</a></h3>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script
+         type="module"
+         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+         ></script>
+      <script
+         nomodule
+         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+         ></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+         rel="stylesheet"
+         />
+   </body>
+</html>
